@@ -1,6 +1,5 @@
 window.events = [],
 window.eventList = [
-  'scroll',
   'cut',
   'paste',
   'copy',

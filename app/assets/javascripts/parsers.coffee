@@ -16,7 +16,7 @@ $ ->
 
   $(document).on 'click', '#listen', ->
     $(@).toggleClass 'active'
-    frame = $('#frameWrapper iframe')
+    frame = $('#frame')
     doc = frame.contents()[0]
 
     listening = $(@).hasClass 'active'
