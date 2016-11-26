@@ -1,8 +1,6 @@
 $ ->
   $(document).on 'click', '#navigate', (e) ->
     url = $('#url').val()
-    console.log url
-
     attachIframe(url)
 
   attachIframe = (url) ->
@@ -18,13 +16,14 @@ $ ->
 
   $(document).on 'click', '#listen', ->
     $(@).toggleClass 'active'
+    frame = $('#frameWrapper iframe')
     doc = frame.contents()[0]
 
     listening = $(@).hasClass 'active'
 
     if listening
       # Listen to events
+      startEventRecording(doc)
     else
       # Stop listening
-
-
+      stopEventRecording(doc)

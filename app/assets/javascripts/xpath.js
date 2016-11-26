@@ -1,4 +1,3 @@
-
 function getXPath (element) {
   var xpath = '';
   for ( ; element && element.nodeType == 1; element = element.parentNode ) {
