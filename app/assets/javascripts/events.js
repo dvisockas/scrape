@@ -14,7 +14,8 @@ function startEventRecording (document) {
   eventList.forEach(function (name) {
     document['on' + name] = function (event) {
       events.push({
-        event: event.type,
+        event: event,
+        type: event.type,
         path: getXPath(event.target),
         timestamp: (new Date()).getTime(),
       });
