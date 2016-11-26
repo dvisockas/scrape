@@ -13,4 +13,13 @@ $ ->
       url,
       '" frameborder="0" id="frame"></iframe>'
     ].join('')
+
     $(iframe).appendTo('#frameWrapper')
+
+  $(document).on 'click', '#listen', ->
+    $(@).toggleClass 'active'
+    doc = frame.contents()[0]
+
+    doc.onclick = (event) ->
+      console.log event
+      console.log getXPath(event.target)
