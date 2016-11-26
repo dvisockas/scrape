@@ -20,6 +20,11 @@ $ ->
     $(@).toggleClass 'active'
     doc = frame.contents()[0]
 
-    doc.onclick = (event) ->
-      console.log event
-      console.log getXPath(event.target)
+    listening = $(@).hasClass 'active'
+
+    if listening
+      # Listen to events
+    else
+      # Stop listening
+
+
