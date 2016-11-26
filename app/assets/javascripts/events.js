@@ -1,12 +1,12 @@
 window.events = [],
 window.eventList = [
-  'scroll',
   'cut',
   'paste',
   'copy',
   'keyup',
   'click',
   'select',
+  // 'scroll',
   // 'mousemove',
 ];
 
@@ -21,6 +21,15 @@ function startEventRecording (document) {
       });
     };
   });
+
+  document.onmouseup = function(event) {
+    var selection = document.getSelection();
+
+    if (selection.toString().length > 0) {
+      console.log(selection)
+      console.log(getXPath(selection.anchorNode.parentNode))
+    }
+  }
 }
 
 function stopEventRecording (document) {

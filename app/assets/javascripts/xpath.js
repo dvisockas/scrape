@@ -16,3 +16,23 @@ function getElementsFromXPath (xpath, document) {
   }
   return result;
 }
+
+
+function startXPathSelection(attribute) {
+  window.model = {};
+
+  window.onmouseup = function(event) {
+    // window.model[attribute]
+
+  }
+}
+
+$(function() {
+  $(document).on('click', '#addAttribute', function() {
+    window.currentAttribute = $('input#attributeName').val();
+    startXPathSelection(window.currentAttribute);
+  })
+});
+
+// input#attributeName
+//   span#addAttribute

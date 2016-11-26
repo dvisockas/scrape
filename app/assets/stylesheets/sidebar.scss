@@ -1,0 +1,17 @@
+#sidebar {
+  position: absolute;
+  right: -180px;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  transition: right 300ms ease;
+  .toggle::after {
+    content: '<<'
+  }
+  &.active {
+    right: 0;
+    .toggle::after {
+      content: '>>'
+    }
+  }
+}

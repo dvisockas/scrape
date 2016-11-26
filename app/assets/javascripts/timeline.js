@@ -5,7 +5,7 @@ window.timeline = function(data) {
   var events = data.map(function(datum, index) {
     return {
       id: index + 1,
-      content: datum.event,
+      content: datum.type,
       start: datum.timestamp
     };
   });

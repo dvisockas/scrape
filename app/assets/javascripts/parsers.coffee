@@ -1,4 +1,7 @@
 $ ->
+  $(document).on 'click', '.toggle', ->
+    $('#sidebar').toggleClass 'active'
+
   $(document).on 'click', '#navigate', (e) ->
     url = $('#url').val()
     attachIframe(url)
@@ -24,7 +27,9 @@ $ ->
     if listening
       # Listen to events
       startEventRecording(doc)
+      $('#sidebar').hide()
     else
       window.timeline(window.events)
+      $('#sidebar').show()
       # Stop listening
       stopEventRecording(doc)
