@@ -25,5 +25,6 @@ $ ->
       # Listen to events
       startEventRecording(doc)
     else
+      window.timeline(window.events)
       # Stop listening
       stopEventRecording(doc)
