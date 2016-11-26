@@ -53,6 +53,39 @@
     width: 20px;
     background-color: #D72E2E;
     border-radius: 20px;
-    margin-top: 50%;
+    margin-top: 10px;
+    margin-left: 20px;
+    &.active {
+      -webkit-animation: infdeflate 2s infinite;
+      animation: infdeflate 2s infinite;
+    }
+  }
+}
+
+@-webkit-keyframes infdeflate {
+  0% {
+    transform: scale(1,1);
+  }
+
+  60% {
+    transform: scale(1.5,1.5);
+  }
+
+  100% {
+    transform: scale(1,1);
+  }
+}
+
+@keyframes infdeflate {
+  0% {
+    transform: scale(1,1);
+  }
+
+  50% {
+    transform: scale(1.5,1.5);
+  }
+
+  100% {
+    transform: scale(1,1);
   }
 }
