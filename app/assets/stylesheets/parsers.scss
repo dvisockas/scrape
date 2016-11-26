@@ -4,6 +4,7 @@
 #frame {
   width: 100%;
   height: 100vh;
+  background: #fff;
 }
 
 #browser {
@@ -42,5 +43,7 @@
     cursor: pointer;
     float: left;
     display: inline-block;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
   }
 }
