@@ -22,14 +22,14 @@ function startEventRecording (document) {
     };
   });
 
-  document.onmouseup = function(event) {
-    var selection = document.getSelection();
+  // document.onmouseup = function(event) {
+  //   var selection = document.getSelection();
 
-    if (selection.toString().length > 0) {
-      console.log(selection)
-      console.log(getXPath(selection.anchorNode.parentNode))
-    }
-  }
+  //   if (selection.toString().length > 0) {
+  //     console.log(selection)
+  //     console.log(getXPath(selection.anchorNode.parentNode))
+  //   }
+  // }
 }
 
 function stopEventRecording (document) {
