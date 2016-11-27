@@ -12,5 +12,4 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require selectorgadget_combined.min
 //= require_tree .
